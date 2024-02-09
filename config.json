@@ -1,0 +1,50 @@
+{
+    "name": "Square Payment Integration",
+    "key": "square_integration",
+    "description": "Description for Example Ordering",
+    "author": "Ordering Inc (Jorge Diaz)",
+    "url": "https://ordering.co",
+    "version": "0.0.1",
+    "hooks": {
+        "actions": {
+            "users_register": "/action_register_customer.php",
+            "users_update": "/action_update_customer.php",
+            "users_delete": "/action_delete_customer.php",
+            "categories_register": "/action_register_category.php",
+            "categories_update": "/action_update_category.php",
+            "categories_delete": "/action_delete_category.php",
+            "products_register": "/action_register_product.php",
+            "products_update": "/action_update_product.php",
+            "extras_register": "/action_register_extra.php",
+            "extras_update": "/action_update_extra.php",
+            "extra_options_register": "/action_register_option.php",
+            "extra_options_update": "/action_update_option.php",
+            "extra_option_suboptions_register": "/action_register_suboption.php",
+            "extra_option_suboptions_update": "/action_update_suboption.php",
+            "orders_register": "/action_register_order.php",
+            "places_register": "/action_register_any_order.php"
+        },
+        "filters": {
+            "paymethod_square_pay": [
+                "/filter_square_pay.php"
+            ],
+            "paymethod_square_confirm": [
+                "/filter_paymethod_square_confirm.php"
+            ]
+        }
+    },
+    "configs": [
+        {
+            "name": "Square Oauth Data",
+            "key": "oauth_data",
+            "description": "Oauth data nessesary for use square endpoints",
+            "default_value": "",
+            "public": false,
+            "type": 1,
+            "customizable": false,
+            "hidden": false,
+            "can_replaced_by_businesses": true,
+            "can_replaced_by_sites": false
+        }
+    ]
+}
