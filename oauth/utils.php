@@ -7,7 +7,7 @@ function requestTokenSquare($credentials, $json)
 {
     $headers = getallheaders();
     $datos = json_decode($json, true);
-    echo json_encode($credentials);
+    // echo json_encode($credentials);
     if ($credentials['sandbox'] == null) {
         return error_response("You must set the keys", true);
         // $response['status'] = "error";
